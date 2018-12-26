@@ -343,6 +343,7 @@ class PeriodicTask(models.Model):
             })
 
         err_msg = 'Only one of interval, crontab, or solar must be set'
+        print selected_schedule_types
         if len(selected_schedule_types) > 1:
             error_info = {}
             for selected_schedule_type in selected_schedule_types:
